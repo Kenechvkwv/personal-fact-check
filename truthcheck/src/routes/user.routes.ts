@@ -9,10 +9,12 @@ import { asyncHandler } from "../utils/apiFeatures.js";
 
 const router = Router();
 
-router.post("/signup", (req, res) => {
-  console.log("🔥 Signup route hit!");
-  res.send("Test signup route");
-});
+// Removed the test signup
+
+// router.post("/signup", (req, res) => {
+//   console.log("🔥 Signup route hit!");
+//   res.send("Test signup route");
+// });
 
 router.post("/signup", userValidationRules(), validate, userController.signup);
 
